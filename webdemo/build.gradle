@@ -92,7 +92,9 @@ sonarqube {
         property 'sonar.projectName', 'Example of SonarQube Scanner for Gradle Usage'
     }
 }
-
+repositories {
+    maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+}
 
 
 
