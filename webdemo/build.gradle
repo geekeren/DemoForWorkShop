@@ -60,16 +60,16 @@ test {
 //check.dependsOn integTest
 
 repositories {
-    jcenter()
+    maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
 }
 
 dependencies {
     providedCompile 'javax.servlet:javax.servlet-api:3.1.0'
     testCompile 'junit:junit:4.12'
     testCompile 'org.mockito:mockito-core:2.7.19'
-    testRuntime "org.slf4j:slf4j-log4j12:1.7.5"
-    testCompile 'io.github.bonigarcia:webdrivermanager:1.6.1'
-    testCompile 'org.seleniumhq.selenium:selenium-java:3.3.1'
+//    testRuntime "org.slf4j:slf4j-log4j12:1.7.5"
+//    testCompile 'io.github.bonigarcia:webdrivermanager:1.6.1'
+//    testCompile 'org.seleniumhq.selenium:selenium-java:3.3.1'
 
 //    integTestCompile sourceSets.main.output
 //    integTestCompile sourceSets.test.output
@@ -91,9 +91,6 @@ sonarqube {
     properties {
         property 'sonar.projectName', 'Example of SonarQube Scanner for Gradle Usage'
     }
-}
-repositories {
-    maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
 }
 
 
