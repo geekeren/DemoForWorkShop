@@ -32,12 +32,16 @@ public class HelloServletFunctionalTest {
 
     @Test
     public void sayHello() throws Exception {
-        driver.get("http://120.77.81.180:8080/webdemo/");
+        driver.get("http://localhost:8088/webdemo");
+        Thread.sleep(2000);
 
         driver.findElement(By.id("say-hello-text-input")).sendKeys("Dolly");
+        Thread.sleep(2000);
         driver.findElement(By.id("say-hello-button")).click();
+        Thread.sleep(2000);
 
         assertEquals("Hello Page", driver.getTitle());
         assertEquals("Hello, Dolly!", driver.findElement(By.tagName("h2")).getText());
+        Thread.sleep(2000);
     }
 }

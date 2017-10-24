@@ -54,8 +54,8 @@ pipeline {
             steps {
                 echo 'Deploying..'
          
-                //sh 'ssh -tt bywang@10.209.21.159 < deploy.sh'
-                
+                //sh 'ssh -tt hbao@10.209.21.215 < deploy.sh'
+
                 sh """
                 set -e
                 ssh bywang@10.209.21.159 'bash -s' < checktomcatstatus.sh
@@ -64,11 +64,15 @@ pipeline {
                 cd /var/jenkins_home/workspace/TestForPipeline/webdemo/build/libs
 
                 scp webdemo.war bywang@10.209.21.159:/Users/hbao/Downloads/apache-tomcat-7.0.82/webapps
-                ssh bywang@10.209.21.159 '
+                ssh hbao@10.209.21.215 '
                 cd /Users/hbao/Downloads/apache-tomcat-7.0.82/bin
                 ./startup.sh
                 '
                 """
+
+            }
+        }
+
             }
         }
 

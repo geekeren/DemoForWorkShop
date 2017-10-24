@@ -2,4 +2,7 @@
 .idea
 webdemo/.gradle
 webdemo/build
+webdemo/out
+webdemo/.idea
+*.iml
 .DS_Store
