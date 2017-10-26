@@ -58,7 +58,7 @@ pipeline {
 
                 sh """
                 set -e
-                ssh bywang@10.209.21.159 'bash -s' < checktomcatstatus.sh
+                ssh root@10.209.21.159 'bash -s' < checktomcatstatus.sh
 
 
                 cd /var/jenkins_home/workspace/TestForPipeline/webdemo/build/libs
