@@ -6,6 +6,7 @@ plugins {
     id "org.sonarqube" version "2.5"
 }
 
+
 sourceSets {
     integTest {
         java.srcDir file('src/integTest/java')
